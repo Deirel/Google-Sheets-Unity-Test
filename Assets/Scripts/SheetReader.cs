@@ -12,17 +12,18 @@ using UnityEngine;
 
 public class SheetReader : MonoBehaviour
 {
-    private const string SpreadsheetId = "1PKPc4huluPHa093mApDhdtvNx4htDm6_LkJ-Z4dgIJs";
-
-    [SerializeField] private TMP_InputField resultsTextField;
-    [SerializeField] private TMP_InputField sheetNameTextField;
-    [SerializeField] private TMP_InputField dataRangeTextField;
+    [SerializeField] private TMP_InputField resultsInputField;
+    [SerializeField] private TMP_InputField spreadsheetIdInputField;
+    [SerializeField] private TMP_InputField sheetNameInputField;
+    [SerializeField] private TMP_InputField dataRangeInputField;
 
     private SheetsService service;
-
-    private string SheetName => sheetNameTextField.text;
     
-    private string DataRange => SheetName + "!" + dataRangeTextField.text;
+    private string SpreadsheetId => spreadsheetIdInputField.text;
+
+    private string SheetName => sheetNameInputField.text;
+    
+    private string DataRange => SheetName + "!" + dataRangeInputField.text;
 
     private void Awake()
     {
@@ -50,7 +51,7 @@ public class SheetReader : MonoBehaviour
         }));
 
         var resultsJson = JsonConvert.SerializeObject(data, Formatting.Indented);
-        resultsTextField.text = resultsJson;
+        resultsInputField.text = resultsJson;
     });
 
     public void ReadMore() => TryRun(() =>
@@ -76,7 +77,7 @@ public class SheetReader : MonoBehaviour
             }));
 
         var resultsJson = JsonConvert.SerializeObject(formats, Formatting.Indented);
-        resultsTextField.text = resultsJson;
+        resultsInputField.text = resultsJson;
     });
 
     private static object GetTypedCellValue(CellData cellData)
@@ -112,7 +113,7 @@ public class SheetReader : MonoBehaviour
         catch (Exception e)
         {
             Debug.LogError(e);
-            resultsTextField.text = e.ToString();
+            resultsInputField.text = e.ToString();
         }
     }
 }
