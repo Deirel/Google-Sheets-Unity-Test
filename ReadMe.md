@@ -6,6 +6,7 @@ Requirements
 
 * A project created in https://console.cloud.google.com/ with enabled Google Sheets API
 * A Service Account created in https://console.cloud.google.com/iam-admin/serviceaccounts
+* This project was created in `Unity 2022.2.8f1`
 
 Instructions
 ---
