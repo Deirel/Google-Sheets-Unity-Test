@@ -22,3 +22,7 @@ The button `Read` retrieves the data in the simplest way, interpreting all the d
 The button `Read More` retrieves the data, taking into account the data format which is set in Google Sheets for the cells.
 
 In the large text field the result of reading the data is displayed, including values and their type, in JSON format.
+
+---
+
+Also you can watch [the video tutorial](https://www.youtube.com/watch?v=qm-Ooj6XjvE) I used while developing the project :-)
