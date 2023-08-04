@@ -18,6 +18,11 @@ Instructions
 
 Now you can run the project. In the top input fields enter the spreadsheet's id (can be copied from the URL), the sheet's name and the range of cells for data to retrieve.
 
+Details
+---
+
+The project uses the official [Google.Apis.Sheets.v4](https://www.nuget.org/packages/Google.Apis.Sheets.v4) NuGet package, installed via the [NuGetForUnity](https://github.com/GlitchEnzo/NuGetForUnity) package.
+
 The button `Read` retrieves the data in the simplest way, interpreting all the data as a plain text.
 
 The button `Read More` retrieves the data, taking into account the data format which is set in Google Sheets for the cells.
