@@ -101,7 +101,7 @@ public class SheetReader : MonoBehaviour
         if (effectiveValue.StringValue != null)
             return effectiveValue.StringValue;
 
-        return null;
+        return effectiveValue.ToString();
     }
     
     private void TryRun(Action action)
